@@ -11,6 +11,7 @@ En este repositorio, encontrarás los siguientes archivos:
 
 Además de los archivos mencionados, he seguido las lecciones y las instrucciones de contenido proporcionadas en el desafío. He marcado este proyecto con una estrella ⭐ y he publicado mi portfolio en GitHub Pages utilizando el tema/topic asignado al grupo al que pertenezco.
 
-Puedes acceder a mi portfolio en [enlace a mi proyecto en GitHub Pages]. Este proyecto representa mi esfuerzo y aprendizaje durante el desafío Challenge ONE, y estoy orgulloso/a de compartirlo contigo.
+Puedes acceder a mi portfolio en [[enlace a mi proyecto en GitHub Pages]](https://mitdesarrollo.github.io/Porfolio-Alura.github.io/). Este proyecto representa mi esfuerzo y aprendizaje durante ![portfolio](https://github.com/MITdesarrollo/Porfolio-Alura.github.io/assets/108035224/09c696e1-5522-477c-a76d-21fb84734661)
+el desafío Challenge ONE, y estoy orgulloso/a de compartirlo contigo.
 
 ¡Agradezco la oportunidad de participar en este desafío y espero que disfrutes explorando mi portfolio! No dudes en contactarme si tienes alguna pregunta o comentario.

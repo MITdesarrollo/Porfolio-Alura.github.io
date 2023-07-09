@@ -116,7 +116,7 @@ export const handler_form = (body, imagenPrincipal) => {
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
     submitButton.className = "btn_enviar"
-    submitButton.textContent = 'enviar';
+    submitButton.textContent = 'Enviar';
     formContainer.appendChild(submitButton);
 
     // Mensaje de advertencia

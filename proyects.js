@@ -46,6 +46,7 @@ export const handler_proyect = (body, imagenPrincipal) => {
 
         //Contenido/atributos
         a.setAttribute('href', el.link);
+        a.setAttribute('target', '_blank');
         icon.setAttribute('src', "./asset/enlace.png" );
       
         name.textContent = el.nombre;

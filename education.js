@@ -25,7 +25,7 @@ export const handler_education = (body, imagenPrincipal ) => {
     informacion.append(title, title_1, courses_info);
     
     //Contenido
-    title.textContent = "Mi educacion y";
+    title.textContent = "Mi educación y";
     title_1.textContent = "certificaciones";
 
     //for redes

@@ -21,7 +21,7 @@ export const handler_stack = (body, imagenPrincipal) => {
     title.classList.add('span_1');
     stack.classList.add('ul_stack')
     //contenido
-    title.textContent = "My Skills";
+    title.textContent = "Mi Stack";
 
     const skill_array = skills;
 

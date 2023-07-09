@@ -44,6 +44,8 @@ export const  handler_sobreMi = (body, imagenPrincipal) => {
         li.appendChild(link);
         //Contenido/atributos
         link.setAttribute('href', el.link);
+        link.setAttribute('target', '_blank');
+
         link.textContent = el.nombre
         link.classList.add('redes')
     })

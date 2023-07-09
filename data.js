@@ -19,9 +19,9 @@ export const skills = [
 ]
 
 export const proyects = [
-    {nombre:"Challenge Encriptador", link:"aca va el link" , description: "Mi primer challenge en ALura, es un enciptador de mensaje realizado en HTML,CSS y JS."},
-    {nombre:"CareerMap", link:"aca va el link" , description: "Mi primer prototipo funcional de una App diseñada en Figma."},
-    {nombre:"Camilleri Construcciones",link:"aca va el link" , description: "Diseño de interfaz e identidad visual, trabajo Frelance."},
-    {nombre:"Plataforma de Cursos",link:"aca va el link" , description: "CRUD en algunlar, Proyecto final de curso."},
-    {nombre:"Portfolio",link:"aca va el link" ,description: "Mi primer porfolia en Angular + Java , Proyecto final de curso."},
+    {nombre:"Challenge Encriptador", link:"https://mitdesarrollo.github.io/" , description: "Mi primer challenge en ALura, es un enciptador de mensaje realizado en HTML,CSS y JS."},
+    {nombre:"CareerMap", link:"https://www.behance.net/gallery/168923851/CareerMap-Proyecto-Final-Coderhouse-App" , description: "Mi primer prototipo funcional de una App diseñada en Figma."},
+    {nombre:"Camilleri Construciones",link:"https://camillericonstrucciones.com/#/inicio" , description: "Diseño de interfaz e identidad visual, trabajo Frelance."},
+    {nombre:"Plataforma de Cursos",link:"https://entrega-final-theta.vercel.app/register" , description: "CRUD en algunlar, Proyecto final de curso."},
+    {nombre:"Portfolio",link:"https://portfolio-mariel-torres.web.app/home" ,description: "Mi primer porfolio en Angular + Java , Proyecto final de curso."},
 ]

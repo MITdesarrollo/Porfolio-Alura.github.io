@@ -275,6 +275,7 @@ height: 100%;
   background-color: #d8d7e757;
   color: white;
   cursor: pointer;
+  font-family: PPAcma-Semibold;
 }
 .btn_enviar.active {
   background-color: #8a2be2; /* Color violeta oscuro */

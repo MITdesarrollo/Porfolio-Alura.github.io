@@ -218,10 +218,67 @@ span {
   width: 26px;
 }
 /*formulario*/
-.warning{
-  color: red;
+.form{
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100%;
+
+
+}
+.title_form{
+  font-family: PPAcma-Semibold;
+  padding: 1rem;
+}
+.grupo{ 
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+.label{
+  font-size: 1rem;
+  left: 0;
 }
 
+.grupo input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  background-color: #d8d7e757;
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: .5rem;
+}
+.grupo textarea{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  
+  background-color: #d8d7e757;
+  height: 5rem;
+  border-radius: 10px;
+  padding: .5rem;
+}
+.barra{
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  padding: .5rem;
+}
+.btn_enviar{
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #d8d7e757;
+  color: white;
+  cursor: pointer;
+}
+.btn_enviar.active {
+  background-color: #8a2be2; /* Color violeta oscuro */
+}
 /*footer*/
 footer {
   height: 10vh;
@@ -295,7 +352,9 @@ margin: auto;
       width: 100%;
      height: fit-content;
     }
- 
+  .btn_enviar{
+
+  }
   #informacion {
     width: 100%;
    padding: .5rem;
@@ -310,6 +369,9 @@ margin: auto;
     background-color: inherit;
     border-bottom: 1px solid white;
     border-radius: 0; 
+  }
+  .grupo{
+    width: 90%;
   }
   #navFooter ul{
     width: 100%;

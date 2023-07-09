@@ -22,7 +22,8 @@ export const handler_form = (body, imagenPrincipal) => {
 
     // Título
     const title = document.createElement('h1');
-    title.textContent = 'registro';
+    title.textContent = 'Deja tu mensaje';
+    title.className = 'title_form'
     formContainer.appendChild(title);
 
     // Campo de nombre
@@ -30,7 +31,8 @@ export const handler_form = (body, imagenPrincipal) => {
     nombreGroup.className = 'grupo';
 
     const nombreLabel = document.createElement('label');
-    nombreLabel.textContent = 'name';
+    nombreLabel.textContent = 'Name';
+    nombreLabel.className = 'label';
     nombreGroup.appendChild(nombreLabel);
 
     const nombreInput = document.createElement('input');
@@ -51,7 +53,8 @@ export const handler_form = (body, imagenPrincipal) => {
     emailGroup.className = 'grupo';
 
     const emailLabel = document.createElement('label');
-    emailLabel.textContent = 'email';
+    emailLabel.textContent = 'Email';
+    emailLabel.className = 'label';
     emailGroup.appendChild(emailLabel);
 
     const emailInput = document.createElement('input');
@@ -71,7 +74,8 @@ export const handler_form = (body, imagenPrincipal) => {
     asuntoGroup.className = 'grupo';
 
     const asuntoLabel = document.createElement('label');
-    asuntoLabel.textContent = 'Asunto';
+    asuntoLabel.textContent = 'Affair';
+    asuntoLabel.className = 'label';
     asuntoGroup.appendChild(asuntoLabel);
 
     const asuntoInput = document.createElement('input');
@@ -92,7 +96,8 @@ export const handler_form = (body, imagenPrincipal) => {
     mensajeGroup.className = 'grupo';
 
     const mensajeLabel = document.createElement('label');
-    mensajeLabel.textContent = 'mensaje';
+    mensajeLabel.textContent = 'Menssage';
+    mensajeLabel.className = 'label';
     mensajeGroup.appendChild(mensajeLabel);
 
     const mensajeTextarea = document.createElement('textarea');
@@ -110,6 +115,7 @@ export const handler_form = (body, imagenPrincipal) => {
     // Botón de enviar
     const submitButton = document.createElement('button');
     submitButton.type = 'submit';
+    submitButton.className = "btn_enviar"
     submitButton.textContent = 'enviar';
     formContainer.appendChild(submitButton);
 
@@ -126,46 +132,81 @@ export const handler_form = (body, imagenPrincipal) => {
     informacion.appendChild(form);
 
     /* validaciones */
-    let error = false;
+   
+    let error = {
+        nombre: false,
+        email: false,
+        asunto: false,
+        mensaje: false
+    }
     warningText.innerHTML = "";
 
     nombreInput.addEventListener("blur", () => {
         const errorNombre = "El nombre excede los 50 caracteres";
-        if (nombreInput.value.length > 50) {
+        if (nombreInput.value.length > 5) {
             nombreBar.innerHTML = errorNombre;
-            error = true
-        }
-        if (nombreInput.value.length == 0 || nombreInput.value.length <= 50) {
+            error.nombre = true;
+        } else {
             nombreBar.innerHTML = "";
+            error.nombre = false;
         }
     });
     emailInput.addEventListener("blur", () => {
-        const errorEmail = "El email no es valido";
-        let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
+        const errorEmail = "El email no es válido";
+        let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!regexEmail.test(emailInput.value)) {
             emailBar.innerHTML = errorEmail;
-            error = true
-
+            error.email = true;
+        } else {
+            error.email = false;
+            emailBar.innerHTML = "";
         }
     });
+
     asuntoInput.addEventListener("blur", () => {
         const errorAsunto = "Asunto muy largo";
-
-        if (asuntoInput.value.length > 50) {
+        if (asuntoInput.value.length > 5) {
             asuntoBar.innerHTML = errorAsunto;
-            error = true
+            error.asunto = true;
+        } else {
+            error.asunto = false;
+            asuntoBar.innerHTML = "";
         }
     });
-
+    mensajeTextarea.addEventListener("blur", () => {
+        const errorMessage = "Excede los 300 caracteres";
+        if (mensajeTextarea.value.length > 300) {
+            mensajeBar.innerHTML = errorMessage;
+            error.mensaje= true;
+        } else {
+            error.mensaje = false;
+            mensajeBar.innerHTML = "";
+        }
+    });
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (!error) {
-            warningText.textContent = "Enviado"
+        if (!error.nombre && !error.email && !error.asunto && !error.mensaje ) {
+            warningText.textContent = "Enviado";
+             // Restablecer los campos del formulario
+        nombreInput.value = "";
+        emailInput.value = "";
+        asuntoInput.value = "";
+        mensajeTextarea.value = "";
+
+        // Limpiar los mensajes de error
+        nombreBar.innerHTML = "";
+        emailBar.innerHTML = "";
+        asuntoBar.innerHTML = "";
+        mensajeBar.innerHTML = "";
+        submitButton.classList.add("active");
+        }else{
+            warningText.textContent = "Corrija el campo";
         }
     })
+    
 }
+    
 
 
 

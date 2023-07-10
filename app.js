@@ -1,9 +1,9 @@
 
-import { handler_sobreMi } from "./about_me.js";
-import {handler_education } from "./education.js";
-import {handler_stack } from "./stack.js";
-import {handler_proyect } from "./proyects.js";
-import {handler_form  } from "./form.js";
+import { handler_sobreMi } from "./componentes/about_me.js";
+import {handler_education } from "./componentes/education.js";
+import {handler_stack } from "./componentes/stack.js";
+import {handler_proyect } from "./componentes/proyects.js";
+import {handler_form  } from "./componentes/form.js";
 
 
 //Etiquetas principales

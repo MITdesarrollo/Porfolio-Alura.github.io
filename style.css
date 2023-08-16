@@ -110,7 +110,8 @@ header {
 .li_opacity {
   padding: 0.5rem;
   border-radius: 15px;
-  background-color: #d8d7e757;
+  background-color: #c4c4c957;
+  border: 1px solid white;
 }
 
 main {

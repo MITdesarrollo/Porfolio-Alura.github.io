@@ -31,7 +31,7 @@ export const handler_form = (body, imagenPrincipal) => {
     nombreGroup.className = 'grupo';
 
     const nombreLabel = document.createElement('label');
-    nombreLabel.textContent = 'Name';
+    nombreLabel.textContent = 'Nombre';
     nombreLabel.className = 'label';
     nombreGroup.appendChild(nombreLabel);
 
@@ -74,7 +74,7 @@ export const handler_form = (body, imagenPrincipal) => {
     asuntoGroup.className = 'grupo';
 
     const asuntoLabel = document.createElement('label');
-    asuntoLabel.textContent = 'Affair';
+    asuntoLabel.textContent = 'Asunto';
     asuntoLabel.className = 'label';
     asuntoGroup.appendChild(asuntoLabel);
 
@@ -96,7 +96,7 @@ export const handler_form = (body, imagenPrincipal) => {
     mensajeGroup.className = 'grupo';
 
     const mensajeLabel = document.createElement('label');
-    mensajeLabel.textContent = 'Menssage';
+    mensajeLabel.textContent = 'Mensaje';
     mensajeLabel.className = 'label';
     mensajeGroup.appendChild(mensajeLabel);
 
@@ -143,7 +143,7 @@ export const handler_form = (body, imagenPrincipal) => {
 
     nombreInput.addEventListener("blur", () => {
         const errorNombre = "El nombre excede los 50 caracteres";
-        if (nombreInput.value.length > 5) {
+        if (nombreInput.value.length > 50) {
             nombreBar.innerHTML = errorNombre;
             error.nombre = true;
         } else {
